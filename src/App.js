@@ -45,9 +45,9 @@ class App extends React.Component {
 	addItem = (event) => {
 		event.preventDefault();
 		this.setState({
-      // Array concatenation using the spread operator. This method doesn't mutate the toDoItems array directly
-      // equivalent to this let arr1 = [1, 2, 3]; let arr2 = [...arr1, 4]; 
-      // arr2 --> [1,2,3, 4], arr1 --> [1, 2, 3]
+			// Array concatenation using the spread operator. This method doesn't mutate the toDoItems array directly
+			// equivalent to this let arr1 = [1, 2, 3]; let arr2 = [...arr1, 4];
+			// arr2 --> [1,2,3, 4], arr1 --> [1, 2, 3]
 			toDoItems: [ ...this.state.toDoItems, this.state.toDoItem ],
 			toDoItem: {
 				task: '',
@@ -55,30 +55,33 @@ class App extends React.Component {
 				completed: false
 			}
 		});
-  };
-  
-  markComplete = (currentId) => {
-    this.setState({
-      toDoItems: this.state.toDoItems.map(item =>
-        item.id === currentId ? { ...item, completed: !item.completed } : item
-      )
-    });
-  };
+	};
 
-  removeCompleted = () => {
-    this.setState((currentState) => {
-      return {
-        toDoItems: currentState.toDoItems.filter((todoListItem) => todoListItem.completed === false)
-      }
+	markComplete = (currentId) => {
+		this.setState({
+			toDoItems: this.state.toDoItems.map(
+				(item) => (item.id === currentId ? { ...item, completed: !item.completed } : item)
+			)
+		});
+	};
+
+	removeCompleted = () => {
+    this.setState({
+      toDoItems: toDoItems.filter((item) => !item.completed)
     })
-  }
+	};
 
 	render() {
 		return (
 			<div className="wrapper">
 				<h2>Welcome to your Todo App!</h2>
 				<TodoList items={this.state.toDoItems} onMarkComplete={this.markComplete} />
-				<TodoForm onChange={this.handleChanges} onSubmit={this.addItem} todoValue={this.state.toDoItem.task} onRemoveCompleted={this.removeCompleted}/>
+				<TodoForm
+					onChange={this.handleChanges}
+					onSubmit={this.addItem}
+					todoValue={this.state.toDoItem.task}
+					onRemoveCompleted={this.removeCompleted}
+				/>
 			</div>
 		);
 	}
