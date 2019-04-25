@@ -70,8 +70,8 @@ class App extends React.Component {
     this.setState({
       toDoItems: this.state.toDoItems.filter((item) => !item.completed)
     })
-	};
-
+  };
+  
 	render() {
 		return (
 			<div className="wrapper">

@@ -15,11 +15,11 @@ const TodoForm = (props) => {
 				</div>
 				<button className="btn">Add New Item</button>
 			</form>
-      <div className="clear-section">
-        <button className="clear-btn" onClick={() => props.onRemoveCompleted()}>
-            Clear Completed
-        </button>
-      </div>
+			<div className="clear-section">
+				<button className="clear-btn" onClick={() => props.onRemoveCompleted()}>
+					Clear Completed
+				</button>
+			</div>
 		</div>
 	);
 };

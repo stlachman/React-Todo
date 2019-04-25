@@ -37,6 +37,10 @@
 	margin-bottom: 1.5rem;
 }
 
+.list-item:hover {
+  cursor: pointer;
+}
+
 .list-item.line {
 	text-decoration: line-through;
 }
