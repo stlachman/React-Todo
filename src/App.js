@@ -57,22 +57,20 @@ class App extends React.Component {
 		});
   };
   
-  markComplete = (currentItem, currentId) => {
-    this.setState((currentState) => {
-      const completedTask = currentState.toDoItems.find((todoListItem) => todoListItem.task === currentItem)
-      return {
-        toDoItems: currentState.toDoItems.filter((todoListItem) => todoListItem.task !== currentItem)
-          .concat({
-            task: currentItem,
-            id: currentId,
-            completed: !completedTask.completed
-          })
-      }
+  markComplete = (currentId) => {
+    this.setState({
+      toDoItems: this.state.toDoItems.map(item =>
+        item.id === currentId ? { ...item, completed: !item.completed } : item
+      )
     });
   };
 
   removeCompleted = () => {
-    console.log('clicked');
+    this.setState((currentState) => {
+      return {
+        toDoItems: currentState.toDoItems.filter((todoListItem) => todoListItem.completed === false)
+      }
+    })
   }
 
 	render() {
