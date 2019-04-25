@@ -27,10 +27,10 @@ class App extends React.Component {
 		this.state = {
 			toDoItems: toDoItems,
 			toDoItem: {
-				task: '',
-				id: Date.now(),
-				completed: false
-			}
+        task: '',
+        id: Date.now(),
+        completed: false
+      }
 		};
 	}
 
@@ -54,7 +54,7 @@ class App extends React.Component {
 				task: '',
 				id: Date.now(),
 				completed: false
-			}
+      }
 		});
 	};
 
@@ -76,14 +76,17 @@ class App extends React.Component {
 		return (
 			<div className="wrapper">
         <div className="inner-wrapper">
-          <h1>To-Do List</h1>
-          <TodoList items={this.state.toDoItems} onMarkComplete={this.markComplete} />
-          <TodoForm
-            onChange={this.handleChanges}
-            onSubmit={this.addItem}
-            todoValue={this.state.toDoItem.task}
-            onRemoveCompleted={this.removeCompleted}
-          />
+          <div className="content">
+            <h1>To-Do List</h1>
+            <TodoList items={this.state.toDoItems} onMarkComplete={this.markComplete} />
+          </div>
+            <TodoForm
+              onChange={this.handleChanges}
+              onSubmit={this.addItem}
+              todoValue={this.state.toDoItem.task}
+              onRemoveCompleted={this.removeCompleted}
+            />
+          
         </div>
 			</div>
 		);
