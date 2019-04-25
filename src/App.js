@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css';
 
 import TodoList from './components/TodoComponents/TodoList';
 import TodoForm from './components/TodoComponents/TodoForm';
@@ -67,21 +68,23 @@ class App extends React.Component {
 
 	removeCompleted = () => {
     this.setState({
-      toDoItems: toDoItems.filter((item) => !item.completed)
+      toDoItems: this.state.toDoItems.filter((item) => !item.completed)
     })
 	};
 
 	render() {
 		return (
 			<div className="wrapper">
-				<h2>Welcome to your Todo App!</h2>
-				<TodoList items={this.state.toDoItems} onMarkComplete={this.markComplete} />
-				<TodoForm
-					onChange={this.handleChanges}
-					onSubmit={this.addItem}
-					todoValue={this.state.toDoItem.task}
-					onRemoveCompleted={this.removeCompleted}
-				/>
+        <div className="inner-wrapper">
+          <h1>To-Do List</h1>
+          <TodoList items={this.state.toDoItems} onMarkComplete={this.markComplete} />
+          <TodoForm
+            onChange={this.handleChanges}
+            onSubmit={this.addItem}
+            todoValue={this.state.toDoItem.task}
+            onRemoveCompleted={this.removeCompleted}
+          />
+        </div>
 			</div>
 		);
 	}
