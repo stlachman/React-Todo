@@ -39,3 +39,48 @@
 .list-item.line {
 	text-decoration: line-through;
 }
+
+
+/* Form Styles */
+
+.form-field {
+  margin-bottom: 0.5rem;
+}
+
+.form-field input {
+  padding: 1rem 0.5rem 1rem 0.8rem;
+  border: 2px solid #0c0c0c;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  font-family: 'Merriweather', serif;
+}
+
+.btn {
+  font-family: 'Merriweather', serif;
+  padding: 0.5rem 1.2rem;
+  font-size: 1.3rem;
+  margin: 1rem 0 0 0;
+  border-radius: 8px;
+  background: #858585;
+  color: #fff;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.clear-section {
+  margin-top: 2.5rem;
+  text-align: right;
+}
+
+.clear-btn {
+  font-family: 'Merriweather', serif;
+  background: transparent;
+  font-size: 1.4rem;
+  border: 0;
+}
+
+.clear-btn:hover {
+  cursor: pointer;
+}
