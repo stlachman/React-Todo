@@ -1,0 +1,111 @@
+.wrapper {
+	margin: 20rem auto 0;
+	max-width: 440px;
+	background: #f9f9f9;
+}
+
+.inner-wrapper {
+	border-radius: 5px;
+	padding: 2rem 0 4rem;
+	box-shadow: 3px 10px 34px -1px rgba(0,0,0,0.55);
+}
+
+.content {
+  text-align: center;
+}
+
+.wrapper h1 {
+	font-size: 3rem;
+	line-height: 1.2;
+  margin-bottom: 2rem;
+  color: #0C0C0C;
+}
+
+.wrapper p {
+	font-size: 1.9rem;
+  margin-bottom: 2rem;
+  color: #0C0C0C;
+}
+
+.todo-wrapper {
+	list-style: none;
+}
+
+.list-item {
+	font-size: 1.8rem;
+	line-height: 1.2;
+	margin-bottom: 1.5rem;
+}
+
+.list-item:hover {
+  cursor: pointer;
+}
+
+.list-item.line {
+	text-decoration: line-through;
+}
+
+
+/* Form Styles */
+
+.form-wrapper {
+  text-align: center;
+}
+
+.form-field {
+  margin-bottom: 0.5rem;
+}
+
+.form-field input {
+  padding: 1rem 0.5rem 1rem 0.8rem;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 2px solid #0c0c0c;
+  border-left: 0;
+  font-size: 1.4rem;
+  font-family: 'Merriweather', serif;
+}
+
+.form-field input:focus {
+  outline: transparent;
+}
+
+.btn {
+  font-family: 'Merriweather', serif;
+  padding: 0.5rem 1.2rem;
+  font-size: 1.3rem;
+  margin: 1rem 0 0 0;
+  border-radius: 8px;
+  border: 2px solid #7f3ee6;
+  background: #7f3ee6;
+  color: #fff;
+  transition: 0.25s opacity ease-in;
+}
+
+.btn:hover {
+  cursor: pointer;
+  opacity: 0.95;
+}
+
+.clear-section {
+  margin: 2.5rem 1rem 0 0;
+  text-align: right;
+}
+
+.clear-btn {
+  font-family: 'Merriweather', serif;
+  background: transparent;
+  font-size: 1.4rem;
+  border: 0;
+  color: #0C0C0C;
+  transition: 0.2s opacity ease-in;
+}
+
+.clear-btn:focus {
+  outline: none;
+}
+
+.clear-btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
